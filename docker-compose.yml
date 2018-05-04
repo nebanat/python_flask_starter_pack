@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  your_image:
+    build: .
+    command: >
+      gunicorn -b 0.0.0.0:8000
+        --access-logfile -
+        --reload
+        "your_app.app:create_app()"
+    environment:
+      PYTHONUNBUFFERED: 'true'
+    volumes:
+      - '.:/your_app'
+    ports:
+      - '8000:8000'
