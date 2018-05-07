@@ -1,3 +1,4 @@
+import click
 from flask import Flask, jsonify
 from your_app.blueprints.user_example.views import user
 from your_app.blueprints.pages_example.views import page
