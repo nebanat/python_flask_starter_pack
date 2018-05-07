@@ -3,7 +3,7 @@ venv
 .env
 .coverage
 .idea
-Projectify_CLI.egg-info
+YourApp_CLI.egg-info
 __pycache__
 
 */__pycache__
