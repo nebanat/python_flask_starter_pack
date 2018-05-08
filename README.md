@@ -46,25 +46,23 @@ sample
 
 # Noted Dependencies
 
-- Gunicorn: HTTP WSGI server for development and production.
 
-- Celery: Task/Queue manager written in Python
+- [Gunicorn](http://gunicorn.org/): HTTP WSGI server for development and production.
 
-- Flask-RESTful: a flask library for building RESTful APIs
+- [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/): Task/Queue manager written in Python
 
-- Marshmallow: is an ORM/ODM/framework-agnostic library for converting
+- [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/): a flask library for building RESTful APIs
+
+- [Marshmallow](https://marshmallow.readthedocs.io/en/latest/): is an ORM/ODM/framework-agnostic library for converting
 complex datatypes, such as objects, to and from native Python datatypes.
 We used marshmallow with webargs for serialization/deserialization and also for validation
 For more info on Marshmallow click [here](https://marshmallow.readthedocs.io/en/latest/)
 
+- [Postgresql](https://www.postgresql.org/): Our bootstrapped starter integrates with PostgreSQL but
+you can decide to use any SQL or NoSQL database
 
-- Postgresql: Our bootstrapped starter integrates with PostgreSQL but
-you can decide to use any SQL or NoSQl database
+- [Click](http://flask.pocoo.org/docs/0.12/cli/): A python library for building custom CLI commands for your
 
-- Click: A python library for building custom CLI commands for your
- application for example: db initialization and seeding.
-We provided two templates for building cli commands one that accepts arguments
-and another options.
 
 # Folder Structure
 
@@ -84,32 +82,32 @@ more info on blueprint click [here](http://flask.pocoo.org/docs/1.0/blueprints/)
     app.py
 ```
 
-- cli: holds your custom application CLI commands, check out sample for
+- **cli**: holds your custom application CLI commands, check out sample for
 creating commands with arguments and options
 
-- config: holds application config. see settings.example.py for some of the
+- **config**: holds application config. see settings.example.py for some of the
 application configuration you need to provide. You may decide to hold your
 app configs in a .env file.
 
-- your_app: holds app source code arranged in modules using flask blueprint.
+- **your_app**: holds app source code arranged in modules using flask blueprint.
 Each blueprint has three folders and a views.py file. Explained below
 
-- resources: holds api resources for a blueprint,
+- **resources**: holds api resources for a blueprint,
  needed especially if you building restful api(s)
 
-- schemas: holds marshmallow schemas for a blueprint
+- **schemas**: holds marshmallow schemas for a blueprint
 
-- Templates: holds jinja templates for a blueprint, necessary especially
+- **Templates**: holds jinja templates for a blueprint, necessary especially
 if you are using flask jinja templating engine for your view layer.
 
-- views.py: This file is where you initialize your blueprint, its resources
+- **views.py**: This file is where you initialize your blueprint, its resources
 and probably its routes
 
-- app.py: create an instance of your application using factory pattern.
+- **app.py**: create an instance of your application using factory pattern.
 This file is where you initialize your blueprints, remember to register
 your blueprints else it never happened.
 
-Note: The folder structure is entirely subjective, but scales when
+**Note**: The folder structure is entirely subjective, but scales when
 your application gets large. you can have own way of modularizing
 your application( It is up to you)
 
