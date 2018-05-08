@@ -46,6 +46,7 @@ sample
 
 # Noted Dependencies
 
+
 - [Gunicorn](http://gunicorn.org/): HTTP WSGI server for development and production.
 
 - [Celery](http://flask.pocoo.org/docs/0.12/patterns/celery/): Task/Queue manager written in Python
@@ -57,14 +58,11 @@ complex datatypes, such as objects, to and from native Python datatypes.
 We used marshmallow with webargs for serialization/deserialization and also for validation
 For more info on Marshmallow click [here](https://marshmallow.readthedocs.io/en/latest/)
 
-
 - [Postgresql](https://www.postgresql.org/): Our bootstrapped starter integrates with PostgreSQL but
 you can decide to use any SQL or NoSQL database
 
 - [Click](http://flask.pocoo.org/docs/0.12/cli/): A python library for building custom CLI commands for your
- application for example: db initialization and seeding.
-We provided two templates for building cli commands one that accepts arguments
-and another options.
+
 
 # Folder Structure
 
