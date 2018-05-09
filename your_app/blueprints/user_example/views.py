@@ -1,9 +1,11 @@
 from flask import Blueprint, render_template
 from flask_restful import Api
-from your_app.blueprints.user_example.resources.user_resource import UserResource
+from your_app.blueprints.user_example.resources.user_resource \
+    import UserResource
 
 # registers a new user blueprint
-user = Blueprint('user', __name__, url_prefix='/user', template_folder='templates')
+user = Blueprint('user', __name__,
+                 url_prefix='/user', template_folder='templates')
 
 user_api = Api(user)
 

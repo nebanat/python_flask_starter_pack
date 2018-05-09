@@ -14,7 +14,8 @@ class UserSchema(Schema):
     email = fields.Email(required=True)
     created_at = fields.DateTime(dump_only=True, missing='')
     updated_at = fields.DateTime(dump_only=True, missing='')
-    items = fields.Nested(ItemSchema, many=True, missing=[])  # nested schema to reflect db relationship
+    # nested schema to reflect db relationship
+    items = fields.Nested(ItemSchema, many=True, missing=[])
 
     class Meta:
         strict = True

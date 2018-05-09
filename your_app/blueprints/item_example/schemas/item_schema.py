@@ -43,5 +43,3 @@ class ItemSchema(Schema):
     def slugify_description(self, data):
         data['slug'] = data['description'].lower().strip().replace(' ', '-')
         return data
-
-

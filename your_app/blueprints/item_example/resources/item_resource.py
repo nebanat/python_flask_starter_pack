@@ -11,16 +11,19 @@ class ItemResource(Resource):
         This could be a database call to get all item resources but for
         the sake of demo we would simulate the db call
 
-        :return: jsonified deserialized ItemSchema object (please see ItemSchema)
+        :return: jsonified deserialized ItemSchema object
+         (please see ItemSchema)
         """
 
-        item_data_one = dict(name='some item', price=20)
+        item_data_one = dict(name='some item',
+                             description='some description', price=20)
 
-        item_data_two = dict(name='another item', price=50)
+        item_data_two = dict(name='another item',
+                             description='another description', price=50)
 
         items = [item_data_one, item_data_two]
 
         result = ItemSchema(many=True).dump(items)
 
-        return jsonify(dict(items=result.data, message='items successfully fetched'))
-
+        return jsonify(dict(items=result.data,
+                            message='items successfully fetched'))
