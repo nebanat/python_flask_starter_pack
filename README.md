@@ -56,12 +56,20 @@ sample
 - [Marshmallow](https://marshmallow.readthedocs.io/en/latest/): is an ORM/ODM/framework-agnostic library for converting
 complex datatypes, such as objects, to and from native Python datatypes.
 We used marshmallow with webargs for serialization/deserialization and also for validation
-For more info on Marshmallow click [here](https://marshmallow.readthedocs.io/en/latest/)
 
 - [Postgresql](https://www.postgresql.org/): Our bootstrapped starter integrates with PostgreSQL but
 you can decide to use any SQL or NoSQL database
 
-- [Click](http://flask.pocoo.org/docs/0.12/cli/): A python library for building custom CLI commands for your
+- [Click](http://flask.pocoo.org/docs/0.12/cli/): A python library for building custom CLI commands for your application
+checkout our example commands with arguments and options
+
+- [Pytest](https://docs.pytest.org/en/latest/contents.html): Pytest makes
+it easy to write small unit tests yet scales to support complex functional
+and integration test. Check out how to define fixtures as oppose to xUnit setup
+and teardown. check out our custom command to run test
+
+- [Flake8](http://flake8.pycqa.org/en/latest/): Static code analyzer for your Python codebase.
+check out our custom command to run flake8
 
 
 # Folder Structure

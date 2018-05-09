@@ -23,6 +23,7 @@ class UserResource(Resource):
 
         item_data = {
             'name': 'user item',
+            'description': 'item description',
             'price': 20
         }
 
@@ -41,7 +42,8 @@ class UserResource(Resource):
         This could be a database call to create a single user resource but for
         the sake of demo we would simulate the db call
 
-        :param args: user request args (which is validated by UserSchema using the decorator @user_args)
+        :param args: user request args
+        (which is validated by UserSchema using the decorator @user_args)
         :return: jsonfied serialized UserSchema object
         """
         new_user = dict(**args)

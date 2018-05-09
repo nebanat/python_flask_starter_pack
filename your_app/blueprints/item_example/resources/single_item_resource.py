@@ -36,7 +36,8 @@ class SingleItemResource(Resource):
         the sake of demo we would simulate the db call
 
         :param
-            args: user request args (which is validated by ItemSchema using the decorator @user_args)
+            args: user request args
+            (which is validated by ItemSchema using the decorator @user_args)
             item_id = item id
 
         :return: jsonified deserialized UserSchema object

@@ -6,10 +6,10 @@ page = Blueprint('page', __name__, template_folder='templates')
 
 # creates custom routes for page blueprint
 @page.route('/contact')
-def user_index():
+def contact():
     return render_template('page/contact.html')
 
 
 @page.route('/privacy')
-def register():
+def privacy():
     return render_template('page/privacy.html')
